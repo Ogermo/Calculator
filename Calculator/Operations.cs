@@ -91,6 +91,21 @@ namespace Calculator
 
         }
 
+        public double Ln(double one)
+        {
+            double num;
+            Console.Clear();
+            num = Math.Log(one);
+            if (double.IsInfinity(num) || double.IsNaN(num))
+            {
+                throw new System.OverflowException();
+            }
+            Console.WriteLine($"Ln({one})={num}");
+            Confirm();
+            return num;
+
+        }
+
         public double Fact(double one)
         {
             double num;
