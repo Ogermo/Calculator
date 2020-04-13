@@ -129,5 +129,6 @@ namespace Calculator
         {
             return nm.GetNumber();
         }
+
     }
 }
