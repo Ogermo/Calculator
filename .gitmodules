@@ -4,3 +4,6 @@
 [submodule "DokiDoki-Decompile"]
 	path = DokiDoki-Decompile
 	url = https://github.com/judge2020/DokiDoki-Decompile
+[submodule "centOS"]
+	path = centOS
+	url = https://github.com/Ogermo/centOS
