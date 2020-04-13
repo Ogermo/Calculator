@@ -47,32 +47,6 @@ namespace Calculator
             return num;
         }
 
-        public double Fact(double one)
-        {
-            double num;
-            Console.Clear();
-            if ((one < 0) || Math.Abs(one % 1) > (Double.Epsilon * 100))
-            {
-                Console.WriteLine("this operation don't support negative and not whole numbers");
-                return one;
-            }
-            num = 1;
-            for (int i = 1; i < one; i++)
-            {
-                num = num * i;
-                if (double.IsInfinity(num) || double.IsNaN(num))
-                {
-                    throw new System.OverflowException();
-                }
-            }
-
-            Console.WriteLine($"{one}! ={num}");
-
-            return num;
-
-        }
-
-
         public double Add(double one)
         {
             double num;
