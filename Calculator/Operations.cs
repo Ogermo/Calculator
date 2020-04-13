@@ -47,24 +47,6 @@ namespace Calculator
             return num;
         }
 
-        public double Pow(double one)
-        {
-            double num;
-            Console.Clear();
-            Console.WriteLine($"{one}^");
-            Console.WriteLine("Write second number");
-            double two = GetNumber();
-            num = Math.Pow(one,two);
-            if (double.IsInfinity(num) || double.IsNaN(num))
-            {
-                throw new System.OverflowException();
-            }
-            Console.WriteLine($"{one}^{two}={num}");
-
-            return num;
-
-        }
-
         public double Add(double one)
         {
             double num;
@@ -147,6 +129,5 @@ namespace Calculator
         {
             return nm.GetNumber();
         }
-
     }
 }
