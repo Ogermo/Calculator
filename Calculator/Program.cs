@@ -19,6 +19,7 @@ namespace Calculator
                 "*",
                 "^",
                 "!",
+                "log",
                 "sin",
                 "cos",
                 "tan",
@@ -61,11 +62,14 @@ namespace Calculator
                         case "/":
                             num = op.Div(num);
                             break;
+                        case "!":
+                            num = op.Fact(num);
+                            break;
                         case "^":
                             num = op.Pow(num);
                             break;
-                        case "!":
-                            num = op.Fact(num);
+                        case "log":
+                            num = op.Log(num);
                             break;
                         case "sin":
                             num = op.Sin(num);

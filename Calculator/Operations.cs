@@ -73,6 +73,24 @@ namespace Calculator
             return num;
         }
 
+        public double Log(double one)
+        {
+            double num;
+            Console.Clear();
+            Console.WriteLine($"{one}^");
+            Console.WriteLine("Write second number");
+            double two = GetNumber();
+            num = Math.Log(one, two);
+            if (double.IsInfinity(num) || double.IsNaN(num))
+            {
+                throw new System.OverflowException();
+            }
+            Console.WriteLine($"Log {two} ({one})={num}");
+            Confirm();
+            return num;
+
+        }
+
         public double Fact(double one)
         {
             double num;
