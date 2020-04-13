@@ -20,6 +20,7 @@ namespace Calculator
                 "^",
                 "!",
                 "log",
+                "ln",
                 "sin",
                 "cos",
                 "tan",
@@ -70,6 +71,9 @@ namespace Calculator
                             break;
                         case "log":
                             num = op.Log(num);
+                            break;
+                        case "ln":
+                            num = op.Ln(num);
                             break;
                         case "sin":
                             num = op.Sin(num);
