@@ -78,7 +78,7 @@ namespace Calculator
                 throw new System.OverflowException();
             }
             Console.WriteLine($"Log {two} ({one})={num}");
-
+            Confirm();
             return num;
 
         }
