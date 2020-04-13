@@ -15,6 +15,8 @@ namespace Calculator
             double num;
             num = Math.Sin(Math.PI / 180 * one);
             Console.WriteLine($"sin:({one})={num}");
+            Confirm();
+
             return num;
         }
 
@@ -23,6 +25,8 @@ namespace Calculator
             double num;
             num = Math.Cos(Math.PI / 180 * one);
             Console.WriteLine($"cos:({one})={num}");
+            Confirm();
+
             return num;
         }
 
@@ -31,6 +35,8 @@ namespace Calculator
             double num;
             num = Math.Tan(Math.PI / 180 * one);
             Console.WriteLine($"tan:({one})={num}");
+            Confirm();
+
             return num;
         }
 
@@ -44,6 +50,8 @@ namespace Calculator
             }
             num = 1 / num;
             Console.WriteLine($"cot:({one})={num}");
+            Confirm();
+
             return num;
         }
 
@@ -60,9 +68,9 @@ namespace Calculator
                 throw new System.OverflowException();
             }
             Console.WriteLine($"{one}^{two}={num}");
+            Confirm();
 
             return num;
-
         }
 
         public double Fact(double one)
@@ -85,6 +93,7 @@ namespace Calculator
             }
 
             Console.WriteLine($"{one}! ={num}");
+            Confirm();
 
             return num;
 
@@ -104,6 +113,7 @@ namespace Calculator
                 throw new System.OverflowException();
             }
             Console.WriteLine($"{one}+{two}={num}");
+            Confirm();
 
             return num;
         }
@@ -121,6 +131,7 @@ namespace Calculator
                 throw new System.OverflowException();
             }
             Console.WriteLine($"{one}-{two}={num}");
+            Confirm();
 
             return num;
         }
@@ -138,6 +149,7 @@ namespace Calculator
                 throw new System.OverflowException();
             }
             Console.WriteLine($"{one}*{two}={num}");
+            Confirm();
 
             return num;
         }
@@ -159,7 +171,7 @@ namespace Calculator
                 throw new System.OverflowException();
             }
             Console.WriteLine($"{one}/{two}={num}");
-
+            Confirm();
             return num;
         }
 
@@ -172,6 +184,13 @@ namespace Calculator
         public virtual double GetNumber()
         {
             return nm.GetNumber();
+        }
+
+        public virtual void Confirm()
+        {
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+            return;
         }
 
     }

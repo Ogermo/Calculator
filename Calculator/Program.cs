@@ -61,11 +61,11 @@ namespace Calculator
                         case "/":
                             num = op.Div(num);
                             break;
-                        case "!":
-                            num = op.Fict(num);
-                            break;
                         case "^":
                             num = op.Pow(num);
+                            break;
+                        case "!":
+                            num = op.Fact(num);
                             break;
                         case "sin":
                             num = op.Sin(num);
